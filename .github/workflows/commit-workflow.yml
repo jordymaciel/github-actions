@@ -1,0 +1,31 @@
+name: Commit Workflow
+
+on:
+  push:
+    branches:
+      - nova-branch-teste
+
+jobs:
+  commit-flow:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+
+    - name: Switch to "developer" branch
+      run: git switch -C developer
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Compile project
+      run: npm run build
+
+    - name: Run tests
+      run: npm test
