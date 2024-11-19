@@ -13,13 +13,10 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v3
 
-    - name: Switch to "developer" branch
-      run: git switch -C developer
-
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: 18
+        node-version: 20
 
     - name: Install dependencies
       run: npm install
@@ -29,4 +26,3 @@ jobs:
 
     - name: Run tests
       run: npm test
-
