@@ -3,7 +3,7 @@ name: Commit Workflow
 on:
   push:
     branches:
-      - developer
+      - nova-branch-teste
 
 jobs:
   commit-flow:
