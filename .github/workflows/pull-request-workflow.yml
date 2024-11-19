@@ -1,12 +1,12 @@
-name: Commit Workflow
+name: Pull Request Workflow
 
 on:
-  push:
+  pull_request:
     branches:
-      - nova-branch-teste
+      - main
 
 jobs:
-  commit-flow:
+  pull-request-flow:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,4 +29,5 @@ jobs:
 
     - name: Run tests
       run: npm test
-      run: npm test
+
+      
