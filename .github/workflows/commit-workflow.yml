@@ -1,12 +1,12 @@
-name: Pull Request Workflow
+name: Commit Workflow
 
 on:
-  pull_request:
+  push:
     branches:
-      - main
+      - nova-branch-teste
 
 jobs:
-  pull-request-flow:
+  commit-flow:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +19,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: 20
+        node-version: 18
 
     - name: Install dependencies
       run: npm install
@@ -29,5 +29,4 @@ jobs:
 
     - name: Run tests
       run: npm test
-
       
