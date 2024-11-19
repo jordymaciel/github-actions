@@ -1,0 +1,35 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+/dist
+/build
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript
+*.tsbuildinfo
+
+# IDEs e editores de código
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Arquivos temporários e de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração de testes (se existirem)
+coverage/
+
+# Arquivos de ambiente (geralmente sensíveis, como variáveis)
+.env
+.env.local
+.env.*.local
+
+# Diretórios do GitHub Actions (se você gerar logs ou artefatos temporários)
+.github/workflo
