@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@v3
+      with:
+        ref: developer
 
     - name: Switch to "developer" branch
       run: git checkout developer
@@ -19,7 +21,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: 20
+        node-version: 18
 
     - name: Install dependencies
       run: npm install
